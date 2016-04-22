@@ -2,7 +2,8 @@ package Email::Sender::Transport::GmailSMTP;
 # ABSTRACT: send email over SMTP with google oauth
 
 use Moose 0.90;
-extends 'Email::Sender::Transport::SMTP';
+#Email::Sender::Transport::SMTP in bug not working.
+extends 'Email::Sender::Transport::SMTPS';
 
 use Net::Cmd qw(CMD_OK);
 use MIME::Base64 qw(encode_base64);
